@@ -1,0 +1,66 @@
+//COLORS
+$white:#fff;
+$black: #000;
+$mainColor: #0f0f0f;
+$toogleBg:#303942;
+$searchInputBg:#121212;
+$searchButonBg:#222222;
+$soundButon: #0f0f0f;
+$soundButonHover:#303030 ;
+$settingIcon:#585858;
+$lightGray:#c4c4c4;
+$gray:#9a9999;
+$blueText: #1e90ff;
+$signinButonBg: #2369af;
+
+
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body{
+    font-family: 'Roboto', sans-serif;
+    background-color: $mainColor;
+    color: $white;
+}
+a{
+    text-decoration: none;
+}
+li{
+    list-style: none;
+}
+*:focus {
+    outline: none;
+}
+@mixin size($width, $height){
+    width: $width;
+    height: $height;
+}
+@mixin flex($display, $align-items, $justify-content){
+    display: $display;
+    align-items: $align-items;
+    justify-content: $justify-content;
+}
+.hr{
+    @include size(100%, 3px);
+    background-color: $gray;
+    margin-bottom: 20px;
+}
+
+
+.giris{
+    @include size(120px, 35px);
+    padding: 5px;
+    background-color: $black;
+    color: $blueText;
+    border-radius: 20px;
+    font-size: 14px;
+    border: 1px solid $settingIcon;
+    &:hover{
+        background: $signinButonBg;
+        opacity: 2;
+        z-index: -2;
+    }
+}

@@ -1,0 +1,47 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #0f0f0f;
+  color: #fff;
+}
+
+a {
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
+
+*:focus {
+  outline: none;
+}
+
+.hr {
+  width: 100%;
+  height: 3px;
+  background-color: #9a9999;
+  margin-bottom: 20px;
+}
+
+.giris {
+  width: 120px;
+  height: 35px;
+  padding: 5px;
+  background-color: #000;
+  color: #1e90ff;
+  border-radius: 20px;
+  font-size: 14px;
+  border: 1px solid #585858;
+}
+
+.giris:hover {
+  background: #2369af;
+  opacity: 2;
+  z-index: -2;
+}

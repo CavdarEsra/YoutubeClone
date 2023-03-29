@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="index.css">
+    <title>Youtube</title>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="navbar-container">
+            <div class="navbar-left">
+                <div class="toogleButon">
+                    <div class="toogleButon-line"></div>
+                    <div class="toogleButon-line"></div>
+                    <div class="toogleButon-line"></div>
+                </div>
+                <div class="logo">
+                    <img src="images/youtube.png" alt="Logo">
+                    <p>YouTube</p>
+                    <span class="logo-tr">TR</span>
+                </div>
+            </div>
+            <div class="navbar-middle">
+                <div class="search">
+                    <input type="text" class="search-input" placeholder="Ara">
+                    <button class="search-button">
+                        <i class="fa-solid fa-magnifying-glass" style="color: #ffffff;"></i>
+                    </button>
+                </div>
+                <div class="sound-icon">
+                    <i class="fa-solid fa-microphone" style="color: #ffffff;"></i>
+                </div>
+            </div>
+            <!-- !Tooltip olmadı -->
+            <div class="navbar-right">
+                <div class="tooltip">
+                    <p class="tooltiptext">Ayarlar</p>
+                </div>
+
+                <button class="giris">Oturum Aç</button>
+            </div>
+        </div>
+    </nav>
+
+    <section class="sidebar">
+        <div class="sidebar-links">
+            <a href="" class="active"><i class="fa-sharp fa-solid fa-house"></i>Anasayfa</a>
+            <a href=""><i class="fa-sharp fa-solid fa-house"></i>Shorts</a>
+            <a href=""><i class="fa-sharp fa-solid fa-house"></i>Abonelikler</a>
+            <div class="hr"></div>
+            <a href=""><i class="fa-sharp fa-solid fa-house"></i>Kitaplık</a>
+            <a href=""><i class="fa-sharp fa-solid fa-house"></i>Geçmiş</a>
+            <div class="hr"></div>
+            <p>Videoları beğenmek, yorum yapmak ve abone olmak için oturum açın.</p>
+            <button class="giriss">Oturum Aç</button>
+            <br>
+            <div class="hr"></div>
+            <h6>Keşfet</h6>
+            <a href=""><i class="fa-sharp fa-solid fa-house"></i>Trendler</a>
+            <a href=""><i class="fa-sharp fa-solid fa-house"></i>Müzik</a>
+            <a href=""><i class="fa-sharp fa-solid fa-house"></i>Canlı</a>
+            <a href=""><i class="fa-sharp fa-solid fa-house"></i>Oyun</a>
+            <a href=""><i class="fa-sharp fa-solid fa-house"></i>Spor</a>
+            <div class="hr"></div>
+            <a href=""><i class="fa-sharp fa-solid fa-house"></i>Kanallara göz at</a>
+            <div class="hr"></div>
+            <p>YouTube'dan daha fazla içerik</p>
+            <a href=""><i class="fa-sharp fa-solid fa-house"></i>YouTube Premium</a>
+            <a href=""><i class="fa-sharp fa-solid fa-house"></i>YouTube Music</a>
+            <a href=""><i class="fa-sharp fa-solid fa-house"></i>YouTube Kids</a>
+            <div class="hr"></div>
+            <a href=""><i class="fa-sharp fa-solid fa-house"></i>Ayarlar</a>
+            <a href=""><i class="fa-sharp fa-solid fa-house"></i>İçerik bildirme geç...</a>
+            <a href=""><i class="fa-sharp fa-solid fa-house"></i>Yardım</a>
+            <a href=""><i class="fa-sharp fa-solid fa-house"></i>Geri bildirim gönder</a>
+            <div class="hr"></div>
+            <div class="bottom-links">
+            <p>Hakkında Basın Telif hakkı </p>
+            <p>Bize ulaşın İçerik Üreticiler </p>
+            <p>Reklam verme Geliştiriciler</p>
+            <br>
+            <p>Şartlar Gizlilik</p>
+            <p>Politika ve Güvenlik</p>
+            <p>YouTube Nasıl Çalışıyor?</p>
+            <p>Yeni özellikleri deneyin</p>
+            <br>
+            </div>
+            <p>© 2023 Google LLC</p>
+        </div>
+    </section>
+
+    <section class="main">
+
+    <div class="main-container">
+
+        <div class="main__top">
+            <ul class="main__top-links">
+                <li><button class="main__top-links-button active">Tümü</button></li>
+                <li><button class="main__top-links-button">Müzik</button></li>
+                <li><button class="main__top-links-button">Komedi skeç gösterileri</button></li>
+                <li><button class="main__top-links-button">Canlı</button></li>
+                <li><button class="main__top-links-button">Yemek pişirme</button></li>
+                <li><button class="main__top-links-button">Rap yapma</button></li>
+                <li><button class="main__top-links-button">Futbol</button></li>
+                <li><button class="main__top-links-button">Son yükelenenler</button></li>
+                <li><button class="main__top-links-button">İzlenenler</button></li>       
+            </ul>
+        </div>
+
+        <div class="main__cards">
+
+            <div class="card">
+                <div class="card-image">
+                <img src="images/card-img.jpg" class="card-img">
+                <span class="card-minute">2:00</span>
+                </div>
+                <div class="card-content">
+                    <div class="card-icon">
+                        <img src="images/card-img.jpg" alt="">
+                    </div>
+                    <div class="card-name">
+                    <p>Athena-Kafama Göre</p>
+                    <p class="muted">netd müzik</p>
+                    <p class="muted">33 Mn görüntüleme . 8 yıl önce</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-image">
+                <img src="images/card-img.jpg" class="card-img">
+                <span class="card-minute">2:00</span>
+                </div>
+                <div class="card-content">
+                    <div class="card-icon">
+                        <img src="images/card-img.jpg" alt="">
+                    </div>
+                    <div class="card-name">
+                    <p>Athena-Kafama Göre</p>
+                    <p class="muted">netd müzik</p>
+                    <p class="muted">33 Mn görüntüleme . 8 yıl önce</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-image">
+                <img src="images/card-img.jpg" class="card-img">
+                <span class="card-minute">2:00</span>
+                </div>
+                <div class="card-content">
+                    <div class="card-icon">
+                        <img src="images/card-img.jpg" alt="">
+                    </div>
+                    <div class="card-name">
+                    <p>Athena-Kafama Göre</p>
+                    <p class="muted">netd müzik</p>
+                    <p class="muted">33 Mn görüntüleme . 8 yıl önce</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-image">
+                <img src="images/card-img.jpg" class="card-img">
+                <span class="card-minute">2:00</span>
+                </div>
+                <div class="card-content">
+                    <div class="card-icon">
+                        <img src="images/card-img.jpg" alt="">
+                    </div>
+                    <div class="card-name">
+                    <p>Athena-Kafama Göre</p>
+                    <p class="muted">netd müzik</p>
+                    <p class="muted">33 Mn görüntüleme . 8 yıl önce</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-image">
+                <img src="images/card-img.jpg" class="card-img">
+                <span class="card-minute">2:00</span>
+                </div>
+                <div class="card-content">
+                    <div class="card-icon">
+                        <img src="images/card-img.jpg" alt="">
+                    </div>
+                    <div class="card-name">
+                    <p>Athena-Kafama Göre</p>
+                    <p class="muted">netd müzik</p>
+                    <p class="muted">33 Mn görüntüleme . 8 yıl önce</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-image">
+                <img src="images/card-img.jpg" class="card-img">
+                <span class="card-minute">2:00</span>
+                </div>
+                <div class="card-content">
+                    <div class="card-icon">
+                        <img src="images/card-img.jpg" alt="">
+                    </div>
+                    <div class="card-name">
+                    <p>Athena-Kafama Göre</p>
+                    <p class="muted">netd müzik</p>
+                    <p class="muted">33 Mn görüntüleme . 8 yıl önce</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="card">
+                <div class="card-image">
+                <img src="images/card-img.jpg" class="card-img">
+                <span class="card-minute">2:00</span>
+                </div>
+                <div class="card-content">
+                    <div class="card-icon">
+                        <img src="images/card-img.jpg" alt="">
+                    </div>
+                    <div class="card-name">
+                    <p>Athena-Kafama Göre</p>
+                    <p class="muted">netd müzik</p>
+                    <p class="muted">33 Mn görüntüleme . 8 yıl önce</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-image">
+                <img src="images/card-img.jpg" class="card-img">
+                <span class="card-minute">2:00</span>
+                </div>
+                <div class="card-content">
+                    <div class="card-icon">
+                        <img src="images/card-img.jpg" alt="">
+                    </div>
+                    <div class="card-name">
+                    <p>Athena-Kafama Göre</p>
+                    <p class="muted">netd müzik</p>
+                    <p class="muted">33 Mn görüntüleme . 8 yıl önce</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="hr"></div>
+
+        </div>
+
+        <div class="main__shorts">
+            <div class="main__shorts-title">
+                <img src="images/youtube-shorts-icon.png" alt="">
+                <h6>Shorts</h6>
+            </div>
+            <div class="shorts">
+                <div class="shorts__card">
+                    <div class="shorts__card-img">
+                        <img src="images/card-img.jpg" alt="">
+                    </div>
+                    <div class="shorts__card-content">
+                        <p class="title">Türkiye'de yemek yemek!</p>
+                        <p class="views">337 B görüntüleme</p>
+                    </div>
+                </div>
+                <div class="shorts__card">
+                    <div class="shorts__card-img">
+                        <img src="images/card-img.jpg" alt="">
+                    </div>
+                    <div class="shorts__card-content">
+                        <p class="title">Türkiye'de yemek yemek!</p>
+                        <p class="views">337 B görüntüleme</p>
+                    </div>
+                </div>
+                <div class="shorts__card">
+                    <div class="shorts__card-img">
+                        <img src="images/card-img.jpg" alt="">
+                    </div>
+                    <div class="shorts__card-content">
+                        <p class="title">Türkiye'de yemek yemek!</p>
+                        <p class="views">337 B görüntüleme</p>
+                    </div>
+                </div>
+                <div class="shorts__card">
+                    <div class="shorts__card-img">
+                        <img src="images/card-img.jpg" alt="">
+                    </div>
+                    <div class="shorts__card-content">
+                        <p class="title">Türkiye'de yemek yemek!</p>
+                        <p class="views">337 B görüntüleme</p>
+                    </div>
+                </div>
+                <div class="shorts__card">
+                    <div class="shorts__card-img">
+                        <img src="images/card-img.jpg" alt="">
+                    </div>
+                    <div class="shorts__card-content">
+                        <p class="title">Türkiye'de yemek yemek!</p>
+                        <p class="views">337 B görüntüleme</p>
+                    </div>
+                </div>
+                <div class="shorts__card">
+                    <div class="shorts__card-img">
+                        <img src="images/card-img.jpg" alt="">
+                    </div>
+                    <div class="shorts__card-content">
+                        <p class="title">Türkiye'de yemek yemek!</p>
+                        <p class="views">337 B görüntüleme</p>
+                    </div>
+                </div>
+                <div class="shorts__card">
+                    <div class="shorts__card-img">
+                        <img src="images/card-img.jpg" alt="">
+                    </div>
+                    <div class="shorts__card-content">
+                        <p class="title">Türkiye'de yemek yemek!</p>
+                        <p class="views">337 B görüntüleme</p>
+                    </div>
+                </div>
+                <div class="shorts__card">
+                    <div class="shorts__card-img">
+                        <img src="images/card-img.jpg" alt="">
+                    </div>
+                    <div class="shorts__card-content">
+                        <p class="title">Türkiye'de yemek yemek!</p>
+                        <p class="views">337 B görüntüleme</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="downIcon">
+            <i class="fa-sharp fa-solid fa-chevron-down" style="color: #ffffff;">
+            </i>
+        </div>
+        <div class="hr"></div>
+
+        <div class="main__cards">
+
+            <div class="card">
+                <div class="card-image">
+                <img src="images/card-img.jpg" class="card-img">
+                <span class="card-minute">2:00</span>
+                </div>
+                <div class="card-content">
+                    <div class="card-icon">
+                        <img src="images/card-img.jpg" alt="">
+                    </div>
+                    <div class="card-name">
+                    <p>Athena-Kafama Göre</p>
+                    <p class="muted">netd müzik</p>
+                    <p class="muted">33 Mn görüntüleme . 8 yıl önce</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-image">
+                <img src="images/card-img.jpg" class="card-img">
+                <span class="card-minute">2:00</span>
+                </div>
+                <div class="card-content">
+                    <div class="card-icon">
+                        <img src="images/card-img.jpg" alt="">
+                    </div>
+                    <div class="card-name">
+                    <p>Athena-Kafama Göre</p>
+                    <p class="muted">netd müzik</p>
+                    <p class="muted">33 Mn görüntüleme . 8 yıl önce</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-image">
+                <img src="images/card-img.jpg" class="card-img">
+                <span class="card-minute">2:00</span>
+                </div>
+                <div class="card-content">
+                    <div class="card-icon">
+                        <img src="images/card-img.jpg" alt="">
+                    </div>
+                    <div class="card-name">
+                    <p>Athena-Kafama Göre</p>
+                    <p class="muted">netd müzik</p>
+                    <p class="muted">33 Mn görüntüleme . 8 yıl önce</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-image">
+                <img src="images/card-img.jpg" class="card-img">
+                <span class="card-minute">2:00</span>
+                </div>
+                <div class="card-content">
+                    <div class="card-icon">
+                        <img src="images/card-img.jpg" alt="">
+                    </div>
+                    <div class="card-name">
+                    <p>Athena-Kafama Göre</p>
+                    <p class="muted">netd müzik</p>
+                    <p class="muted">33 Mn görüntüleme . 8 yıl önce</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-image">
+                <img src="images/card-img.jpg" class="card-img">
+                <span class="card-minute">2:00</span>
+                </div>
+                <div class="card-content">
+                    <div class="card-icon">
+                        <img src="images/card-img.jpg" alt="">
+                    </div>
+                    <div class="card-name">
+                    <p>Athena-Kafama Göre</p>
+                    <p class="muted">netd müzik</p>
+                    <p class="muted">33 Mn görüntüleme . 8 yıl önce</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-image">
+                <img src="images/card-img.jpg" class="card-img">
+                <span class="card-minute">2:00</span>
+                </div>
+                <div class="card-content">
+                    <div class="card-icon">
+                        <img src="images/card-img.jpg" alt="">
+                    </div>
+                    <div class="card-name">
+                    <p>Athena-Kafama Göre</p>
+                    <p class="muted">netd müzik</p>
+                    <p class="muted">33 Mn görüntüleme . 8 yıl önce</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="card">
+                <div class="card-image">
+                <img src="images/card-img.jpg" class="card-img">
+                <span class="card-minute">2:00</span>
+                </div>
+                <div class="card-content">
+                    <div class="card-icon">
+                        <img src="images/card-img.jpg" alt="">
+                    </div>
+                    <div class="card-name">
+                    <p>Athena-Kafama Göre</p>
+                    <p class="muted">netd müzik</p>
+                    <p class="muted">33 Mn görüntüleme . 8 yıl önce</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-image">
+                <img src="images/card-img.jpg" class="card-img">
+                <span class="card-minute">2:00</span>
+                </div>
+                <div class="card-content">
+                    <div class="card-icon">
+                        <img src="images/card-img.jpg" alt="">
+                    </div>
+                    <div class="card-name">
+                    <p>Athena-Kafama Göre</p>
+                    <p class="muted">netd müzik</p>
+                    <p class="muted">33 Mn görüntüleme . 8 yıl önce</p>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+    </section>
+    
+    <script src="https://code.jquery.com/jquery-3.6.4.js" integrity="sha256-a9jBBRygX1Bh5lt8GZjXDzyOB+bWve9EiO7tROUtj/E=" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+</html>

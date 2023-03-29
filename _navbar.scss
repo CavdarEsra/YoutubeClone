@@ -1,0 +1,109 @@
+.navbar{
+    align-items: center;
+    padding-top: 0;
+    @include size(100%, 4rem);
+    top: 0;
+    left: 0;
+    position: fixed;
+    z-index: 10;
+    background-color: $black;
+    &-container{
+            width: 98%;
+            margin: auto;
+            @include flex(flex, center, space-between);
+    }
+    &-left{
+            @include flex(flex, center, center);
+            .toogleButon{     
+                    @include size(35px, 35px);
+                    @include flex(flex, center, center);
+                    flex-direction: column;
+                    border-radius: 50%;
+                    &:hover{
+                            background: $toogleBg;
+                            transition: all 0.5s;
+                    }
+                    &-line{
+                            @include size(18px, 1px);
+                            background-color: $white; 
+                            margin-top: 3px;
+                    }
+            }
+            .logo{
+                    width: 100px; //90px
+                    margin-left: 20px;
+                    position: relative;
+                    display: flex;
+                    
+                    img{
+                            width: 40%;
+                            height: 50%;
+                            margin-right: 5px;
+                            padding-top: 10px;
+
+                    }
+                    p{
+                            width: 60%;
+                            padding-top: 15px;
+                            font-size: 20px;
+                            font-weight: 500;
+                            letter-spacing: -2px;
+                           
+                    }
+                    &-tr{
+                            position: absolute;
+                            padding-top: 10px;
+                            top: 0;
+                            right: -20px;
+                            font-size: 10px;
+                    }
+            }
+    }
+    &-middle{
+            @include flex(flex, center, center);
+            .search{
+                    @include size(35rem, 40px);
+                    min-width: 200px;
+                    display: flex;
+                    &-input{
+                            @include size(85%, 100%);
+                            background: $searchInputBg;
+                            color: $white;
+                            border: 1px solid $searchButonBg;
+                            border-radius: 100px;
+                            border-top-right-radius:0;
+                            border-bottom-right-radius:0;
+                            padding-left: 15px;
+                            &:focus{
+                                    border:1px solid $blueText;
+                            }
+                    }
+                    &-button{
+                            background: $searchButonBg;
+                            border: 1px solid $searchButonBg;
+                            border-top-right-radius:100px;
+                            border-bottom-right-radius:100px;
+                            width: 12%;
+                    }
+            }
+            .sound-icon{
+                    @include size(35px, 35px);
+                    background: $soundButon;
+                    border-radius: 50%;
+                    padding: 5px;
+                    text-align: center;
+                    &:hover{
+                            background: $soundButonHover;
+                    }
+            }
+    }
+    &-right{
+            @include flex(flex, center, center);
+            // .tooltip{
+
+            //         .tooltiptext{
+
+            //         }
+            // }
+    }
+}

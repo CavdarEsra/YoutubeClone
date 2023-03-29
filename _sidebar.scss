@@ -1,0 +1,72 @@
+.sidebar{
+    @include size(15%, 100vh);
+    position: fixed;
+    top: 4rem;
+    overflow: hidden;
+    padding-top: 20px ;
+    padding-bottom: 80px ;
+    font-size: 13px;
+    .giriss{
+            @extend .giris;
+            margin-bottom: 15px;
+            
+    }
+    &:hover{
+            overflow: scroll;
+    }
+    &::-webkit-scrollbar{
+            position: absolute;
+            z-index:2;
+            right: 0;
+            width: 10px;
+    }
+    &::-webkit-scrollbar-thumb {
+            background: $toogleBg; 
+            border-radius: 15px;
+    }
+    &::-webkit-scrollbar-thumb:hover {
+            background: $toogleBg; 
+    }
+    &-links{
+            margin-left: 6%;
+            margin-right: 6%;
+            .bottom-links{
+                    color: $lightGray;
+                    font-size: 10px;
+                    line-height: 5px;
+            }
+            p:last-child{
+                    font-size: 10px;
+                    color: $gray;
+            }
+            a{
+                    @include flex(flex, center, flex-start);
+                    flex-direction: row;
+                    margin-bottom: 3px;
+                    flex-wrap: wrap;
+                    color: $white;
+                    padding: 10px;
+                    border-radius: 10px;
+
+                    &.active{
+                            background-color: $settingIcon;
+                    }
+                    &:hover{
+                            background-color: $gray;
+                            transition: all 0.2s;
+                    }
+                    i{
+                            width: 20px;
+                            margin-right: 10px;
+                    }
+            }
+            .hr{
+                    border: 0;
+                    height: 1px;
+                    width: 85%;
+                    margin-bottom: 10px;
+                    background-color: $lightGray !important;
+            }
+    }
+}
+
