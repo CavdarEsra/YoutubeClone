@@ -1,64 +1,66 @@
-//AJAX
-const data = null;
 
-const xhr = new XMLHttpRequest();
-xhr.withCredentials = true;
+  $(document).ready(function() {
+    $('.sidebar').show();
+    $('.sidebar2').hide();
+    
+    $('.toogleButon').click(function() {
+      if ($('.sidebar').is(':visible')) {
+        $('.sidebar').hide();
+        $('.sidebar2').show();
+        $('.main').css('width', '93%');
+      } else {
+        $('.sidebar').show();
+        $('.sidebar2').hide();
+        $('.main').css('width', '85%');
+      }
+    });
+  });
 
-xhr.addEventListener("readystatechange", function () {
-	if (this.readyState === this.DONE) {
-		console.log(this.responseText);
-	}
-});
 
-xhr.open("GET", "https://youtube-v31.p.rapidapi.com/captions?part=snippet&videoId=M7FIvfx5J10");
-xhr.setRequestHeader("X-RapidAPI-Key", "233125d3d6msh3758c64bfba44d7p194893jsncc4a386b0991");
-xhr.setRequestHeader("X-RapidAPI-Host", "youtube-v31.p.rapidapi.com");
 
-xhr.send(data);
-
-// $(document).ready(function() {
-//     let eskiSidebar = $(".sidebar");
-//     let eskiMain = $(".main");
-//     console.log(eskiSidebar);
-//     $(".toogleButon").click(function(){
-//         eskiSidebar.animate({
-//             width: 10% 
-//         },1000);
-//         eskiMain.animate({
-//             width: 90% 
-//         },1000);
-
-//     })
-// });
-
-// $(document).ready(function() {
-//     $(".toggleButon").click(function() {
-//       if($(".sidebar").is(":visible")) {
-//         $(".sidebar").hide();
-//         $(".sidebar2").show();
-//       } else {
-//         $(".sidebar").show();
-//         $(".sidebar").hide();
-//       }
-//     });
+// var apiKey = 'YoutubeAPIyaz';
+// function getYouTubeData() {
+//   $.ajax({
+//     url: 'https://www.googleapis.com/youtube/v3/search',
+//     type: 'GET',
+//     data: {
+//       key: apiKey,
+//       q: 'kedi',
+//       part: 'snippet',
+//       maxResults: 10 
+//     },
+//     success: function(data) {
+//       processData(data);
+//     },
+//     error: function(jqXHR, textStatus, errorThrown) {
+//       alert('AJAX Error: ' + textStatus + ' ' + errorThrown);
+//     }
 //   });
+// }
+
+// function processData(data) {
+//   var videoList = '';
+
+//   for (var i = 0; i < data.items.length; i++) {
+//     var video = data.items[i];
+//     videoList += '<div class="video">';
+//     videoList += '<h2>' + video.snippet.title + '</h2>';
+//     videoList += '<p>' + video.snippet.description + '</p>';
+//     videoList += '<iframe width="560" height="315" src="https://www.youtube.com/embed/' + video.id.videoId + '" frameborder="0" allowfullscreen></iframe>';
+//     videoList += '</div>';
+//   }
+
+//   $('#videos').html(videoList);
+// }
+
+// getYouTubeData();
 
 
 // $(document).ready(function() {
 //     $('.toggleButon').click(function() {
-//       $('.sidebar').toggleClass('sidebar2');
-//       $('#main').toggleClass('main2');
+//       $('.sidebar').toggleClass('close');
 //     });
 //   });
 
 
-// $(document).ready(function() {
-//    if($(".toggleButon").on("click", function (){
-//     if($(".main").hasClass(".active")){
-//         $('.main').removeClass(".active")
-//     }
-//     else{
-//         $('.main').addClass(".active")
-//     }
-//    }));
-// });
+ 

@@ -9,21 +9,16 @@
         float: right;
         margin-top: 4rem;
 
-        // &.active{
-        //         @include size(92% , auto);
-        //         @extend .sidebar;
-        // }
+
         &-container{
                 padding-right: 1.5rem;
                 padding-left: 1.5rem;
         }
         &__top{
                 @include size(100%, 4rem);
-                background: #000;
-                background-color: $black;
+                background-color: $mainColor;
                 position: fixed;
                 z-index: 5;
-
                 &-links{
                         @include flex(flex, center, flex-start);
                         padding: 10px 10px 10px 0;
@@ -64,7 +59,7 @@
                                 @include size(100%, 60%);
                         }
                         &-content{
-                                padding: 20px 10px;
+                                padding: 30px 10px;
                                 display: flex;
                                 flex-direction: row;
                                 color: $white;
@@ -154,6 +149,8 @@
                 }
         }
 }
+
+
 
 
 //video.html in style
