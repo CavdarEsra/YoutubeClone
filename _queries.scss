@@ -1,0 +1,17 @@
+$lg-screen: '(max-width:1200px)';
+$md-screen: '(max-width:992px)';
+$sm-screen: '(max-width:768px)';
+
+
+@media #{$md-screen} {
+.navbar{height: auto}
+  .navbar-container{flex-direction: column}
+  .sidebar{padding-top: 100px}
+  .main{margin-top: 9rem;}
+  .main__top{padding: 1rem;}
+}
+
+@media #{$sm-screen} {
+  .main__cards{padding-top: 100px; }
+  .main__top-links{height: auto;}
+}

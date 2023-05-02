@@ -1,28 +1,31 @@
 @import 'sidebar';
-.icon{
+
+.icon {
         @extend .icon;
 }
 
 //index main 
-.main{
-        @include size(85% , auto);
+.main {
+        @include size(85%, auto);
         float: right;
         margin-top: 4rem;
-
-
-        &-container{
-                padding-right: 1.5rem;
-                padding-left: 1.5rem;
+        min-width: 20rem;
+        &-container {
+                padding-right: 2rem;
+                padding-left: 2rem;
         }
-        &__top{
+
+        &__top {
                 @include size(100%, 4rem);
                 background-color: $mainColor;
                 position: fixed;
                 z-index: 5;
-                &-links{
+                
+                &-links {
                         @include flex(flex, center, flex-start);
                         padding: 10px 10px 10px 0;
-                        &-button{
+                        flex-wrap: wrap;
+                        &-button {
                                 display: inline-block;
                                 padding: 5px;
                                 background-color: $settingIcon;
@@ -30,35 +33,41 @@
                                 border-radius: 9px;
                                 border: none;
                                 font-size: 13px;
-                                margin-right: 5px ;
-                                &:hover{
+                                margin-right: 5px;
+
+                                &:hover {
                                         background-color: $gray;
                                         color: $white;
                                 }
 
                         }
-                        &-button.active{
+
+                        &-button.active {
                                 background-color: $white;
                                 color: $black;
                         }
                 }
         }
 
-        &__cards{
+        &__cards {
                 display: flex;
                 flex-wrap: wrap;
+                justify-content: space-around;
                 gap: 20px;
                 padding-top: 70px;
 
-                .card{
+                .card {
                         @include size(23%, auto);
+                        min-width: 15rem;
                         background: none;
-                        &-image{
+
+                        &-image {
                                 position: relative;
                                 border-radius: 30px;
                                 @include size(100%, 60%);
                         }
-                        &-content{
+
+                        &-content {
                                 padding: 30px 10px;
                                 display: flex;
                                 flex-direction: row;
@@ -66,7 +75,8 @@
                                 line-height: 10px;
                                 font-size: 16px;
                         }
-                        &-minute{
+
+                        &-minute {
                                 position: absolute;
                                 right: 2px;
                                 bottom: 2px;
@@ -78,60 +88,73 @@
                                 z-index: 5px;
                                 padding: 2px;
                         }
-                        &-icon{
+
+                        &-icon {
                                 margin-right: 10px;
-                                img{
-                                        @include size(50px,50px);
+
+                                img {
+                                        @include size(50px, 50px);
                                         object-fit: cover;
                                         border-radius: 50%;
                                 }
                         }
-                        &-name{
+
+                        &-name {
                                 display: flex;
                                 flex-direction: column;
-                                .muted{
+
+                                .muted {
                                         color: $gray;
                                         line-height: 15px;
                                 }
                         }
                 }
         }
-        &__shorts{
+
+        &__shorts {
                 margin-bottom: 50px;
-                &-title{
+                overflow: hidden;
+                &-title {
                         margin-bottom: 15px;
                         display: flex;
-                        img{
+
+                        img {
                                 @include size(25px, 25px);
                                 margin-right: 10px;
                                 margin-left: 10px;
                         }
                 }
-                .shorts{
+
+                .shorts {
                         display: flex;
+                        flex-wrap: nowrap;
                         gap: 10px;
                         width: 100%;
 
-                        &__card{
+                        &__card {
                                 @include size(12%, 300px);
-                                &-img{  
-                                        img{
-                                        object-fit: cover;
-                                        @include size(100%, 250px);
-                                        border-radius: 20px;
-                                        margin-bottom: 10px;
+                                min-width: 10rem;
+                                &-img {
+                                        img {
+                                                object-fit: cover;
+                                                @include size(100%, 250px);
+                                                border-radius: 20px;
+                                                margin-bottom: 10px;
                                         }
                                 }
-                                &-content{
-                                        .title{
-                                        margin-bottom: 0;
+
+                                &-content {
+                                        .title {
+                                                margin-bottom: 0;
                                         }
-                                        .views{
+
+                                        .views {
                                                 font-size: 12px;
                                                 color: $gray;
                                         }
                                 }
-                                .hr{
+
+                                .hr {
                                         @include size(100%, 3px);
                                         background-color: $gray;
                                         margin-bottom: 20px;
@@ -139,12 +162,14 @@
                         }
                 }
         }
-        .downIcon{
+
+        .downIcon {
                 text-align: center;
                 justify-content: center;
                 width: 100%;
                 height: 30px;
-                &:hover{
+
+                &:hover {
                         background-color: $gray;
                 }
         }
@@ -154,34 +179,186 @@
 
 
 //video.html in style
-.videoMain{
-        &__container{
+.videoMain {
+        margin-top: 80px;
+
+        &__container {
+                display: flex;
                 padding-left: 4rem;
                 padding-right: 4rem;
         }
-        &__left{
+
+        &__left {
                 width: 70%;
-                background-color: #8d4141;
-                .bigVideo{
+                height: 80vh;
+
+                .bigVideo {
                         width: 100%;
-                        height: 80%;
+                        height: 100%;
                         background-color: blue;
-                        &__bottom{
+
+                        &__bottom {
                                 width: 100%;
-                                &-left{
-                                        .icon{
-                                                @extend .icon;
+                                display: flex;
+                                align-items: center;
+                                justify-content: space-between;
+
+                                &-left {
+                                        display: flex;
+                                        width: 50%;
+
+                                        .icon {
+                                                margin-right: 10px;
+
+                                                img {
+                                                        width: 50px;
+                                                        height: 50px;
+                                                        object-fit: cover;
+                                                        border-radius: 50%;
+                                                }
                                         }
-                                        width: 50%;
+
+                                        .statement {
+                                                margin-right: 30px;
+
+                                                p {
+                                                        margin-bottom: 5px;
+                                                }
+
+                                                p:nth-child(2) {
+                                                        font-size: 14px;
+                                                        color: $gray;
+                                                }
+                                        }
+
+                                        .subscribe {
+                                                height: 35px;
+                                                border-radius: 10px;
+                                                background-color: $white;
+                                                padding: 5px;
+
+                                                &:hover {
+                                                        background-color: $gray;
+                                                }
+                                        }
+
                                 }
-                                &-right{
+
+                                &-right {
                                         width: 50%;
+                                        display: flex;
+                                        align-items: center;
+                                        justify-content: space-between;
+
+                                        .likeDislikeNumber {
+                                                background-color: $soundButonHover;
+                                                width: 35%;
+                                                padding: 9px;
+                                                border-radius: 27px;
+                                                text-align: center;
+
+                                                &:hover {
+                                                        background-color: $gray;
+                                                }
+
+                                                button {
+                                                        @include size(auto, 100%);
+                                                        border: none;
+                                                        background-color: transparent;
+                                                        color: $white;
+                                                }
+
+                                                i {
+                                                        color: $white;
+                                                }
+                                        }
+
+                                        .share,
+                                        .save {
+                                                background-color: $soundButonHover;
+                                                width: 25%;
+                                                padding: 9px;
+                                                border-radius: 27px;
+                                                text-align: center;
+
+                                                &:hover {
+                                                        background-color: $gray;
+                                                }
+                                        }
+
+                                        .dotthree {
+                                                background-color: $soundButonHover;
+                                                width: 10%;
+                                                padding: 9px;
+                                                border-radius: 50%;
+                                                text-align: center;
+
+                                                &:hover {
+                                                        background-color: $gray;
+                                                }
+                                        }
+                                }
+                        }
+
+                        &__description {
+                                width: 100%;
+                                height: 100px;
+                                border-radius: 10px;
+                                background-color: $soundButonHover;
+                                margin-top: 20px;
+                                margin-bottom: 20px;
+
+                                &:hover {
+                                        background-color: $settingIcon;
+                                }
+                        }
+
+                        &__comment {
+                                .commentIcon {
+                                        display: flex;
+                                        margin-bottom: 40px;
+
+                                        img {
+                                                @include size(50px, 50px);
+                                                object-fit: cover;
+                                                border-radius: 50%;
+                                                margin-right: 20px;
+                                        }
+
+                                        input {
+                                                width: calc(100% - 50px);
+                                                background-color: transparent;
+                                                border: none;
+                                                border-bottom: 2px solid $white;
+                                        }
                                 }
                         }
                 }
         }
-        &__right{
-                background-color: aquamarine;
 
+        &__right {
+                width: 30%;
+                height: auto;
+
+                .smallVideoCards {
+                        width: 100%;
+                        height: 200px;
+
+                        .smallVideoCard {
+                                display: flex;
+                                padding: 10px;
+
+                                &__video {
+                                        width: 45%;
+                                        border-radius: 10px;
+                                        border: 2px solid red;
+                                        margin-right: 10px;
+                                }
+
+                                &__description {
+                                        width: 55%;
+                                }
+                        }
+                }
         }
 }

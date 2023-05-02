@@ -63,7 +63,6 @@
             @include flex(flex, center, center);
             .search{
                     @include size(35rem, 40px);
-                    min-width: 200px;
                     display: flex;
                     &-input{
                             @include size(85%, 100%);

@@ -8,6 +8,7 @@
         padding-top: 20px ;
         padding-bottom: 80px ;
         font-size: 13px;
+        min-width:10rem ;
         .giriss{
             @extend .giris;
             margin-bottom: 15px;
@@ -30,8 +31,11 @@
             background: $toogleBg; 
     }
     &-links{
-            margin-left: 6%;
-            margin-right: 6%;
+        padding-left: 1rem;
+        padding-right: 1rem;
+        ul{
+                padding-left: 0;
+        }
             .bottom-links{
                     color: $lightGray;
                     font-size: 10px;
@@ -74,7 +78,8 @@
 
 .sidebar2{
         display: none;
-        @include size(6%, 100vh);
+        @include size(3.5rem, 100vh);
+        min-width: 3rem;
         position: fixed;
         top: 4rem;
         overflow: hidden;
@@ -88,12 +93,13 @@
         padding-left: 0;
                 li{
                         @include flex(flex, center, flex-start);
+                        padding-bottom: 1rem;
                 }
 
 
                 a{
                     color: $white;
-                    padding: 20px;    
+                    padding: 5px;
 
                     &:hover{
                             background-color: $gray;
@@ -102,9 +108,10 @@
                     }
                     i{
                         padding-left: 10px;
-                        font-size: 25px;
+                        font-size: 1rem;
                         margin-bottom: 20px;
                     }
+
             }
     }
 }
